@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Secure Cloud Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function addNonce() {
+            // Generate a random secure nonce for each login
+            const array = new Uint32Array(1);
+            window.crypto.getRandomValues(array);
+            document.getElementById("nonce").value = array[0];
+        }
+    </script>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Secure Cloud Login</h2>
+        <form method="POST" onsubmit="addNonce()">
+            <input type="text" name="username" placeholder="Enter Username" required><br><br>
+            <input type="hidden" name="nonce" id="nonce">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Secure Cloud Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <h2>Secure Cloud Session</h2>
+        <div class="info-box">
+            <p><strong>Anonymous User ID:</strong> {{ anon_id }}</p>
+            <p><strong>Derived Session Key:</strong> {{ session_key }}</p>
+        </div>
+
+        <div class="security-box">
+            <h3>Security Properties</h3>
+            <ul>
+                <li>✔ Anonymous Authentication</li>
+                <li>✔ Certificateless Key Agreement</li>
+                <li>✔ 0-RTT Session Establishment</li>
+                <li>✔ Bad Randomness Resistance</li>
+            </ul>
+        </div>
+
+        <form method="GET" action="/">
+            <button type="submit">Logout / New Session</button>
+        </form>
+    </div>
+</body>
+
+</html>
