@@ -140,7 +140,7 @@ The future scope aligns strongly with the **0‑RTT security model**, including:
 ## 📹 Demo Video
 
 ▶ **Demo Video (Google Drive):**
-[Paste your Google Drive demo video link here]
+https://drive.google.com/file/d/10wtoz-g-1pF46tsE8rvFjHiysmlU3hGV/view?usp=drive_link
 
 ---
 
