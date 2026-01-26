@@ -1,124 +1,92 @@
-Secure Cloud Authentication (0-RTT Key Agreement)
+# Secure Cloud Authentication (0-RTT Based)
 
-This repository contains the implementation of a Secure Cloud Authentication system based on a certificateless key agreement protocol with 0-RTT (Zero Round Trip Time) session establishment.
+This repository contains a web-based Secure Cloud Authentication system designed to demonstrate 0-RTT (Zero Round Trip Time) session establishment, anonymous authentication, and replay attack prevention.
 
-The project demonstrates a fast, anonymous, and secure login mechanism with replay attack prevention using nonces and cryptographic techniques. It was developed as a self-initiated learning project to understand secure authentication workflows used in modern cloud environments.
+The project is developed as a self-initiated academic learning project to understand secure authentication workflows in cloud-based applications without relying on traditional password-based or certificate-heavy mechanisms.
 
-Project Overview
+---
 
-Traditional authentication systems often require multiple communication rounds and rely on certificates or passwords, which can introduce latency and potential security risks.
+## Project Overview
 
-This project implements:
+Modern cloud applications require authentication mechanisms that are fast, secure, and efficient. Traditional authentication systems often introduce additional communication delays and depend on certificates or static credentials.
 
-Anonymous user authentication
+This project focuses on implementing a lightweight secure authentication workflow that demonstrates:
+- Anonymous login
+- 0-RTT-style session establishment
+- Replay attack prevention
+- Secure session logging
+- Web-based authentication flow
 
-Certificateless key agreement with 0-RTT session key derivation
+The implementation emphasizes conceptual clarity and practical understanding rather than enterprise-level cryptographic complexity.
 
-Replay attack prevention using unique nonces
+---
 
-Secure session data storage using SQLite
+## Key Features
 
-A lightweight web interface built with Flask
+- Anonymous user authentication  
+- 0-RTT session establishment for faster authentication  
+- Replay attack prevention using unique nonces  
+- Secure session data storage using SQLite  
+- Simple and clean web-based interface  
 
-The focus is on practical secure authentication, session key management, and database logging.
+---
 
-Features
+## Technologies Used
 
-Anonymous Login: User identities are anonymized using SHA-256 hashing.
+- Python  
+- Flask  
+- SQLite  
+- HTML, CSS, JavaScript  
+- Visual Studio Code  
+- Google Chrome  
 
-0-RTT Session Keys: Session keys are derived with minimal handshake.
+---
 
-Nonce-Based Replay Protection: Unique nonces prevent repeated authentication attempts.
+## Project Structure
 
-Certificateless Key Agreement: Avoids certificate management overhead.
-
-Secure Storage: Stores anonymous user IDs, secret keys, and nonces in SQLite.
-
-Web UI: Simple login and dashboard interfaces.
-
-Technologies Used
-
-Python 3.9+
-
-Flask – Web framework
-
-SQLite – Lightweight relational database
-
-HTML / CSS / JavaScript
-
-hashlib, hmac, secrets – Cryptographic modules
-
-Visual Studio Code – Development environment
-
-Google Chrome – Testing browser
-
-Project Structure
 secure-cloud-authentication-0rtt/
 ├── app.py
 ├── security.db
 ├── templates/
-│   ├── index.html
-│   └── dashboard.html
+│ ├── index.html
+│ └── dashboard.html
 ├── static/
-│   └── style.css
-└── README.md
-
-Setup Instructions
-
-Clone the repository
-
-git clone https://github.com/Gayathri-Nandakumar16/secure-cloud-authentication-0rtt.git
+ └── style.css
 
 
-Navigate into the project folder
+## Setup Instructions
 
-cd secure-cloud-authentication-0rtt
-
-
-Install dependencies
-
+1. Download the repository as a ZIP file from GitHub and extract it to a folder.  
+2. Open the folder in **Visual Studio Code** or your preferred IDE.  
+3. Install Flask if not already installed:
+```bash
 pip install flask
-
-
-Run the application
-
+Run the application:
 python app.py
-
-
-Open your browser and visit:
-
+Open your browser and go to:
 http://127.0.0.1:5000
-
 Demo Video
-
-Watch the demo here:
-Google Drive Link:
-
-<PASTE YOUR DEMO LINK HERE>
-
-
-(Replace the above line with your actual video link.)
-
+Google Drive link to project demo:
+https://drive.google.com/file/d/10wtoz-g-1pF46tsE8rvFjHiysmlU3hGV/view?usp=drive_link
 Learning Outcomes
+Understanding secure cloud authentication workflows
 
-This project provided hands-on experience with:
+Practical exposure to 0-RTT session concepts
 
-Web application security
+Replay attack prevention using nonces
 
-0-RTT key agreement concepts
+Flask-based backend development
 
-Cryptographic hashing and session key derivation
+Frontend and backend integration
 
-Replay attack prevention
-
-Frontend–backend integration with Flask
+Session data storage using SQLite
 
 Author
-
 Gayathri Nandakumar
-Self-Initiated Secure Cloud Authentication Project
+Secure Cloud Authentication – Self-Initiated Project
 January 2026
 
 License
+This project is intended for academic and educational purposes.
 
-This project is provided for educational and learning purposes only.
+
