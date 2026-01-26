@@ -59,16 +59,20 @@ secure-cloud-authentication-0rtt/
 1. Download the repository as a ZIP file from GitHub and extract it to a folder.  
 2. Open the folder in **Visual Studio Code** or your preferred IDE.  
 3. Install Flask if not already installed:
-```bash
 pip install flask
 Run the application:
 python app.py
 Open your browser and go to:
 http://127.0.0.1:5000
-Demo Video
+
+
+
+**Demo Video**
 Google Drive link to project demo:
 https://drive.google.com/file/d/10wtoz-g-1pF46tsE8rvFjHiysmlU3hGV/view?usp=drive_link
-Learning Outcomes
+
+
+**Learning Outcomes**
 Understanding secure cloud authentication workflows
 
 Practical exposure to 0-RTT session concepts
