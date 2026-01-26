@@ -1,169 +1,124 @@
-# Secure Cloud Authentication Project (0‑RTT Key Agreement)
+Secure Cloud Authentication (0-RTT Key Agreement)
 
-A secure cloud authentication system implementing a **0‑RTT (Zero Round Trip Time) key agreement mechanism** to enable fast, anonymous, and secure user authentication over public networks. The project focuses on reducing authentication latency while preventing replay attacks and ensuring secure session key establishment.
+This repository contains the implementation of a Secure Cloud Authentication system based on a certificateless key agreement protocol with 0-RTT (Zero Round Trip Time) session establishment.
 
-This project was developed as a **practical cloud security implementation**, aligned with the documentation prepared for academic and portfolio use.
+The project demonstrates a fast, anonymous, and secure login mechanism with replay attack prevention using nonces and cryptographic techniques. It was developed as a self-initiated learning project to understand secure authentication workflows used in modern cloud environments.
 
----
+Project Overview
 
-## 📌 Project Overview
+Traditional authentication systems often require multiple communication rounds and rely on certificates or passwords, which can introduce latency and potential security risks.
 
-In traditional cloud authentication mechanisms, multiple communication rounds are required before a secure session is established. This increases latency and exposes systems to replay and impersonation attacks.
+This project implements:
 
-This project addresses those challenges by:
+Anonymous user authentication
 
-* Enabling **0‑RTT authentication**, allowing secure communication with minimal delay
-* Supporting **anonymous login initiation**
-* Preventing replay attacks using timestamps and nonces
-* Deriving secure session keys before data exchange
-* Storing sensitive data securely in the cloud
+Certificateless key agreement with 0-RTT session key derivation
 
-The system demonstrates a complete **end‑to‑end secure authentication workflow** from user login to protected cloud data access.
+Replay attack prevention using unique nonces
 
----
+Secure session data storage using SQLite
 
-## 🏗️ System Architecture & Workflow
+A lightweight web interface built with Flask
 
-The system follows a structured workflow:
+The focus is on practical secure authentication, session key management, and database logging.
 
-1. User initiates login through a web interface
-2. Anonymous authentication request is generated
-3. Session parameters (nonce, timestamp) are validated
-4. 0‑RTT session key is derived
-5. Replay attack checks are performed
-6. Secure session is established
-7. Encrypted data access is enabled
+Features
 
-This workflow ensures both **performance efficiency and strong security guarantees**.
+Anonymous Login: User identities are anonymized using SHA-256 hashing.
 
----
+0-RTT Session Keys: Session keys are derived with minimal handshake.
 
-## 🧰 Technologies Used
+Nonce-Based Replay Protection: Unique nonces prevent repeated authentication attempts.
 
-* **Programming Language:** Python
-* **Framework:** Flask (Web Application)
-* **Cloud Platform:** AWS EC2
-* **Database:** SQLite
-* **Development Tools:**
+Certificateless Key Agreement: Avoids certificate management overhead.
 
-  * Visual Studio Code
-  * Google Chrome
+Secure Storage: Stores anonymous user IDs, secret keys, and nonces in SQLite.
 
----
+Web UI: Simple login and dashboard interfaces.
 
-## 🗄️ Database Design
+Technologies Used
 
-The database is designed to securely manage:
+Python 3.9+
 
-* User authentication parameters
-* Session identifiers
-* Timestamps and nonces
-* Encrypted session-related data
+Flask – Web framework
 
-SQLite is used for simplicity and reliability in a cloud-hosted environment.
+SQLite – Lightweight relational database
 
----
+HTML / CSS / JavaScript
 
-## ⚙️ Commands Used
+hashlib, hmac, secrets – Cryptographic modules
 
-Key commands used during development and deployment include:
+Visual Studio Code – Development environment
 
-```bash
-sudo apt update
-sudo apt install python3 python3-pip
-pip3 install flask cryptography
-python3 app.py
-```
+Google Chrome – Testing browser
 
----
+Project Structure
+secure-cloud-authentication-0rtt/
+├── app.py
+├── security.db
+├── templates/
+│   ├── index.html
+│   └── dashboard.html
+├── static/
+│   └── style.css
+└── README.md
 
-## 🧪 Testing and Results
+Setup Instructions
 
-The system was tested under multiple scenarios:
+Clone the repository
 
-* Valid authentication attempts
-* Replay attack simulations
-* Session expiration checks
+git clone https://github.com/Gayathri-Nandakumar16/secure-cloud-authentication-0rtt.git
 
-### Results:
 
-* Authentication latency was significantly reduced
-* Replay attacks were successfully detected and blocked
-* Secure session keys were generated reliably
-* The system maintained consistent performance on cloud deployment
+Navigate into the project folder
 
----
+cd secure-cloud-authentication-0rtt
 
-## 🔐 Security Features & Analysis
 
-* 0‑RTT key agreement mechanism
-* Replay attack prevention using timestamps and nonces
-* Anonymous authentication initiation
-* Secure session key derivation
-* Encrypted communication channel
+Install dependencies
 
-These features collectively ensure confidentiality, integrity, and authentication in cloud communication.
+pip install flask
 
----
 
-## ✅ Advantages of the System
+Run the application
 
-* Reduced authentication delay
-* Strong resistance to replay attacks
-* Lightweight and efficient design
-* Suitable for cloud-based applications
-* Improves user experience without compromising security
+python app.py
 
----
 
-## ⚠️ Limitations of the System
+Open your browser and visit:
 
-* Prototype-level implementation
-* SQLite is not ideal for large-scale production systems
-* Does not include hardware-based security modules
-* Requires further optimization for high-concurrency environments
+http://127.0.0.1:5000
 
----
+Demo Video
 
-## 🔮 Future Enhancements
+Watch the demo here:
+Google Drive Link:
 
-The future scope aligns strongly with the **0‑RTT security model**, including:
+<PASTE YOUR DEMO LINK HERE>
 
-* Integration with TLS 1.3 based 0‑RTT mechanisms
-* Support for multi-factor authentication
-* Migration to scalable cloud databases
-* Formal cryptographic validation and benchmarking
-* Role-based access control
 
----
+(Replace the above line with your actual video link.)
 
-## 📹 Demo Video
+Learning Outcomes
 
-▶ **Demo Video (Google Drive):**
-https://drive.google.com/file/d/10wtoz-g-1pF46tsE8rvFjHiysmlU3hGV/view?usp=drive_link
+This project provided hands-on experience with:
 
----
+Web application security
 
-## 📚 References
+0-RTT key agreement concepts
 
-* Research papers on 0‑RTT authentication protocols
-* Cloud security and key agreement literature
-* NIST guidelines on secure authentication
-* Flask and Python security documentation
+Cryptographic hashing and session key derivation
 
----
+Replay attack prevention
 
-## 👤 Author
+Frontend–backend integration with Flask
 
-**Gayathri Nandakumar**
-Bachelor of Science in Computer Science
+Author
 
----
+Gayathri Nandakumar
+Self-Initiated Secure Cloud Authentication Project
+January 2026
 
-## 📄 License
+License
 
-This project is released under the **MIT License**. You are free to use, modify, and distribute this project with proper attribution.
-
----
-
-⭐ *If you find this project useful, feel free to star the repository!*
+This project is provided for educational and learning purposes only.
